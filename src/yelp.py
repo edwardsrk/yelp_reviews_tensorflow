@@ -88,7 +88,7 @@ def num_to_cat(star):
     else:
         return 'neg'
 
-def conf_matrix_plotter(model):
+def conf_matrix_plotter(model, X_t_vec, y_t):
     fig, ax = plt.subplots()
 
     fig.suptitle(str(model))
