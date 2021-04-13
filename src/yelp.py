@@ -1,3 +1,5 @@
+from nltk.corpus import stopwords, wordnet
+
 def get_wordnet_pos(treebank_tag):
     '''
     Translate nltk POS to wordnet tags
