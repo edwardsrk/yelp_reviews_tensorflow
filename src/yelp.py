@@ -14,13 +14,11 @@ def get_wordnet_pos(treebank_tag):
         return wordnet.NOUN
 
 
-
-sw = stopwords.words('english')
-
-def data_cleaner(doc, stop_words=sw):
+def data_cleaner(doc):
     """A function to strip punctuation, strip stopwords, casefold, lemmatize,
     And part pf speech tag words for clean data for modeling"""
     
+    sw = stopwords.words('english')
     regex_token = RegexpTokenizer(r"([a-zA-Z]+(?:’[a-z]+)?)")
     doc = regex_token.tokenize(doc)
     doc = [word.lower() for word in doc]
