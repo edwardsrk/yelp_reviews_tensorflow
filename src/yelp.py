@@ -1,4 +1,9 @@
+nltk.download('tagsets')
+nltk.help.upenn_tagset()
+from nltk import pos_tag
+from nltk.stem import WordNetLemmatizer, PorterStemmer
 from nltk.corpus import stopwords, wordnet
+from nltk.tokenize import regexp_tokenize, word_tokenize, RegexpTokenizer
 
 def get_wordnet_pos(treebank_tag):
     '''
