@@ -1,3 +1,4 @@
+import nltk
 nltk.download('tagsets')
 nltk.help.upenn_tagset()
 from nltk import pos_tag
