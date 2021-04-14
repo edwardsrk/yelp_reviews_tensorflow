@@ -1,5 +1,5 @@
 # yelp_reviews_tensorflow
-
+![yelpdata](./img/yelpdata.JPG)
 Presented by: Rachel Edwards
 
 ## Overview
