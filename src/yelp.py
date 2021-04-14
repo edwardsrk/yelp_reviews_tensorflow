@@ -101,7 +101,7 @@ def conf_matrix_plotter(model, X_t_vec, y_t):
 def wordcloud_maker(df, stopwords = None):
     """cretes words clouds from cleaned data"""
     all_clean = " ".join(review for review in df.clean)
-    wordcloud = WordCloud( background_color="black").generate(all_clean)
+    wordcloud = WordCloud(stopwords = stopwords, background_color="black").generate(all_clean)
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis("off")
     plt.show()
