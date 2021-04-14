@@ -25,12 +25,17 @@ Yelp Model ![final_model](./img/final_model.JPG) Grubhub Model ![gb_conf](./img/
 ## Conclusions
 Some conclusions that I have come to are that even though the Grubhub is made up of reviews these reviews to do not reflect the positive to negative ratio that was used when training the model on Yelp data. The Yelp ratio was five positive reviews to two negative reviews. The Grubhub ratio is three negative reviews to two positive reviews. Besdies the ratio mismatch much of the negatively tagged data within the Grubhub dataset can be attributed to bad reivews ofGrubhub itself, particularly its delviery drivers. 
 
-![gb_neg_wordcloud](./img/gb_neg_wordcloud.JPG) ![gb_ratio](./img/gb_ratio.JPG)
+![gb_neg_wordcloud](./img/gb_neg_wordcloud.JPG) 
+
+![gb_ratio](./img/gb_ratio.JPG)
 
 ### Next Steps
 -Making a NER model to create an entitty distinction between Grubhub and the actual business attached to the orders
+
 -Gathering more data to input into another model for better predictions
+
 -Figure out how to deal with the opposite distribution
+
 -Deploy an app in Flask that you can type a review into
 
 ## Repository Structure
