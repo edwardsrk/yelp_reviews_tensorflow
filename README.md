@@ -1,5 +1,5 @@
 # yelp_reviews_tensorflow
-        ![yelpdata](./img/yelpdata.JPG)
+![yelpdata](./img/yelpdata.JPG)
 
 Presented by: Rachel Edwards
 
@@ -10,7 +10,7 @@ This is a project to disambiguate three star reviews. This project uses an NlP b
 Most companies have a way to intereact witht heir client base online mowawadays. Those interactions can hold a lot of useful data for most companies. Sometimes the way that data is collected can be confusing do to human error. This project focuses on reviews and rating from users as its source of data. The goal is to use these reviews nd ratings to disambiguate three star reviews. Three star reviews are notoriously tricky to designate as positive or negative due to their more neutral nature. 
 
 ## Data
-The data for this project uses data from both Yelp and Grubhub. The Yelp data can be found here: Yelp Open Dataset. Instructions on how to access, get and split the rest of the data can be located in the data collection folder. The data takes reviews and splits them into positive and negative categories based on their star ratings. Four and five star data is tagged as positive nad two and one star data is tagged as negative. These two tags make up the binary classificaitons used to predict in this project. 
+The data for this project uses data from both Yelp and Grubhub. The Yelp data can be found here: [Yelp Open Dataset](https://www.yelp.com/dataset). Instructions on how to access, get and split the rest of the data can be located in the data collection folder. The data takes reviews and splits them into positive and negative categories based on their star ratings. Four and five star data is tagged as positive and two and one star data is tagged as negative. These two tags make up the binary classificaitons used to predict in this project. 
 
 Negative Wordcloud ![neg_wordcloud](./img/neg_wordcloud.JPG) 
 
