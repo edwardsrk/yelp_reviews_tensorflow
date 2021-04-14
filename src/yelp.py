@@ -79,18 +79,52 @@ def data_cleaner(doc):
     #print(doc)
     lemmatizer = WordNetLemmatizer() 
     doc = [lemmatizer.lemmatize(word[0], word[1]) for word in doc]
-    print(' '.join(doc))
+    #print(' '.join(doc))
     return ' '.join(doc)
 
 def num_to_cat(star):
+    """Gives data a classification tag based on its star rating"""
     if star == 4 or star == 5:
         return 'pos'
     else:
         return 'neg'
 
 def conf_matrix_plotter(model, X_t_vec, y_t):
+    """create confusion matrix plots"""
     fig, ax = plt.subplots()
 
     fig.suptitle(str(model))
 
     plot_confusion_matrix(model, X_t_vec, y_t, ax=ax, cmap="plasma");
+    
+    
+def wordcloud_maker(df):
+    """cretes words clouds from cleaned data"""
+    all_clean = " ".join(review for review in df.clean)
+    wordcloud = WordCloud( background_color="black").generate(all_clean)
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+    plt.show()
+    
+def gb_cleaner(df):
+    """Fixes tags, cleans the text and drops unneccessary columns, data is ready to be put through model"""
+    df['tag'] = df.tags.apply(retagger)
+    
+    c_list = df.text.tolist()
+
+    clean_corpus = []
+    for docs in c_list:
+        clean_corpus.append(data_cleaner(docs))
+    
+    df['clean'] = clean_corpus
+
+    df = df.drop(['text', 'tags', 'stars'], axis= 1)
+    
+    return df
+
+def retagger(tags):
+    """Standardizes tag column to look be either 'pos' or 'neg' and is based off of grubhub sentiment analysis"""
+    if tags == 'Positive':
+        return 'pos'
+    else:
+        return 'neg'
