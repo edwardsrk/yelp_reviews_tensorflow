@@ -12,7 +12,9 @@ Most companies have a way to intereact witht heir client base online mowawadays.
 ## Data
 The data for this project uses data from both Yelp and Grubhub. The Yelp data can be found here: Yelp Open Dataset. Instructions on how to access, get and split the rest of the data can be located in the data collection folder. The data takes reviews and splits them into positive and negative categories based on their star ratings. Four and five star data is tagged as positive nad two and one star data is tagged as negative. These two tags make up the binary classificaitons used to predict in this project. 
 
-Negative Wordcloud ![neg_wordcloud](./img/neg_wordcloud.JPG) Positive Wordcloud ![pos_wordcloud](./img/pos_wordcloud.JPG)
+Negative Wordcloud ![neg_wordcloud](./img/neg_wordcloud.JPG) 
+
+Positive Wordcloud ![pos_wordcloud](./img/pos_wordcloud.JPG)
 
 ## Methods
 THe methods included in the project include NLP data cleanning techniques such as part of speech tagging and lemmatization. The modeling is an iterative process that starts as a first simple model that gets built on by picking the right vectorizer and the best hyperparameters for the data I have collected. This model is then meausured by its accuracy in crossfold validtion and presented as a confusion matrix.
@@ -20,7 +22,9 @@ THe methods included in the project include NLP data cleanning techniques such a
 ## Results
 While the model does well on its own test data from Yelp at about 93% accurately, it performs only adequately on the data from Grubhub at 76% accuracy. 
 
-Yelp Model ![final_model](./img/final_model.JPG) Grubhub Model ![gb_conf](./img/gb_conf.JPG)
+Yelp Model ![final_model](./img/final_model.JPG) 
+
+Grubhub Model ![gb_conf](./img/gb_conf.JPG)
 
 ## Conclusions
 Some conclusions that I have come to are that even though the Grubhub is made up of reviews these reviews to do not reflect the positive to negative ratio that was used when training the model on Yelp data. The Yelp ratio was five positive reviews to two negative reviews. The Grubhub ratio is three negative reviews to two positive reviews. Besdies the ratio mismatch much of the negatively tagged data within the Grubhub dataset can be attributed to bad reivews ofGrubhub itself, particularly its delviery drivers. 
