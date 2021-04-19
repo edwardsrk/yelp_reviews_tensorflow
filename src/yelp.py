@@ -142,3 +142,19 @@ def feature_finder(model):
 
     sorted_feats = feats.sort_values(by='values')
     return  sorted_feats
+
+def key_feat_producer(word_list, prediction):
+    new_df=feats[feats['features'].isin(word_list)]
+    sort = new_df.sort_values(by = 'values')
+    if prediction[0] == 'pos':
+        return sort.tail()
+    else:
+        return sort.head()
+    
+def single_review_prep(text):
+    """Takes in a single review as a string of text, 
+    cleans the review and puts it into a form the model can predict on"""
+    clean_test = data_cleaner(test_review)
+    dummy_dict= {'star': [clean_test]}
+    clean_test_df = pd.DataFrame(dummy_dict)
+    return clean_test_df
