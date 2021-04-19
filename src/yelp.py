@@ -128,3 +128,17 @@ def retagger(tags):
         return 'pos'
     else:
         return 'neg'
+    
+def feature_finder(model):
+    """Takes in a model and pulls out the most relevant 5000 features
+        and their coefficients. Returns a dataframe of features and coefficients"""
+    
+    features = model.steps[0][1].get_feature_names()
+    feat_values = model[1].coef_
+
+    c = {'features' : features}
+    feats = pd.DataFrame(data = c)
+    feats['values'] = feat_values[0]
+
+    sorted_feats = feats.sort_values(by='values')
+    return  sorted_feats
