@@ -157,7 +157,7 @@ def key_feat_producer(review, prediction):
 def single_review_prep(text):
     """Takes in a single review as a string of text, 
     cleans the review and puts it into a form the model can predict on"""
-    clean_test = data_cleaner(test_review)
+    clean_test = data_cleaner(text)
     dummy_dict= {'star': [clean_test]}
     clean_test_df = pd.DataFrame(dummy_dict)
     return clean_test_df
