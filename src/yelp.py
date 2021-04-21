@@ -143,7 +143,10 @@ def feature_finder(model):
     sorted_feats = feats.sort_values(by='values')
     return  sorted_feats
 
-def key_feat_producer(word_list, prediction):
+def key_feat_producer(review, prediction):
+    """Takes in a list of words and a prediction"""
+    pred = list(prediction)
+    word_list = data_cleaner(review).split()
     new_df=feats[feats['features'].isin(word_list)]
     sort = new_df.sort_values(by = 'values')
     if prediction[0] == 'pos':
