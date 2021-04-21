@@ -17,7 +17,7 @@ Negative Wordcloud ![neg_wordcloud](./img/neg_wordcloud.JPG)
 Positive Wordcloud ![pos_wordcloud](./img/pos_wordcloud.JPG)
 
 ## Methods
-THe methods included in the project include NLP data cleanning techniques such as part of speech tagging and lemmatization. The modeling is an iterative process that starts as a first simple model that gets built on by picking the right vectorizer and the best hyperparameters for the data I have collected. This model is then meausured by its accuracy in crossfold validtion and presented as a confusion matrix.
+The methods included in the project include NLP data cleanning techniques such as part of speech tagging and lemmatization. The modeling is an iterative process that starts as a first simple model that gets built on by picking the right vectorizer and the best hyperparameters for the data I have collected. This model is then meausured by its accuracy in crossfold validtion and presented as a confusion matrix.
 
 ## Results
 While the model does well on its own test data from Yelp at about 93% accurately, it performs only adequately on the data from Grubhub at 76% accuracy. 
@@ -39,8 +39,6 @@ Grubhub Negative Wordcloud ![gb_neg_wordcloud](./img/gb_neg_wordcloud.JPG)
 -Gathering more data to input into another model for better predictions
 
 -Figure out how to deal with the opposite distribution
-
--Deploy an app in Flask that you can type a review into
 
 ## Repository Structure
 ```
