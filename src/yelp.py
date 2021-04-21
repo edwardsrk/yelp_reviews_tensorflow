@@ -48,7 +48,7 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 
 from xgboost import XGBClassifier
 
-form tabulate import tabulate
+from tabulate import tabulate
 
 def get_wordnet_pos(treebank_tag):
     '''
