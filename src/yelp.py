@@ -143,7 +143,7 @@ def feature_finder(model):
     sorted_feats = feats.sort_values(by='values')
     return  sorted_feats
 
-def key_feat_producer(review, prediction):
+def key_feat_producer(review, prediction,feats):
     """Takes in a list of words and a prediction"""
     pred = list(prediction)
     word_list = data_cleaner(review).split()
