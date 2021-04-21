@@ -48,6 +48,8 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 
 from xgboost import XGBClassifier
 
+form tabulate import tabulate
+
 def get_wordnet_pos(treebank_tag):
     '''
     Translate nltk POS to wordnet tags
