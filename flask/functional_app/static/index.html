@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+      This is the title that appears in the browser tab.
+      Replace it with the title of your app
+    -->
+    <title>Review Predictor</title>
+    <link rel="stylesheet" media="screen" href="/static/bootstrap.min.css">
+    <!-- If you add custom CSS, put it after the above bootstrap link -->
+  </head>
+  <body>
+    <div class="container">
+      <!-- 
+        This top section has the gray background and large text containing the
+        name of the app
+      -->
+      <div class="jumbotron">
+        <!-- Replace with the name of your app-->
+        <h1 class="display-4">Review Predictor</h1>
+      </div>
+      <!-- This section contains a photo + the form for the user to enter data-->
+      <div class="container"> 
+        <div class="row">
+          <div class="col-md-auto" style="text-align: center;">
+            <!--
+              Replace with a photo relevant to your project (and caption if
+              applicable). It will automatically fill the same width as the
+              template version due to CSS styling.
+            -->
+            <img src="/static/example_3_star.jpg" width = "600", height = "321", alt="example" >            
+          </div>
+          <div class="col-md-auto">
+            <!--
+              Replace all labels and inputs with the relevant features for your
+              model
+              Attributes to note:
+              id: this is used on the front end to link the label to the input
+              name: this is used on the back end when you submit the form; it
+                becomes the key in the params dictionary
+              value: this is the default value of the input. not necessary but
+                helpful for speeding up demos
+
+              The <br>s between each label/input combo are a quick and easy way
+              to put each one on its own line. They aren't necessary for the
+              form to function but they help the flow without needing a lot of
+              nested <div>s to achieve the desired layout
+            -->
+            <form action="/make_prediction" method="post">
+              <label for="input-1">Review to Predict</label>
+              <textarea rows="10" cols="40" id="input-1" name="user_review_prediction"></textarea>
+              
+              <!--
+                Note on "select" (drop-down): the value is what is sent as the
+                value in the params dictionary, the text between the tags is
+                what the user sees
+              -->
+              
+              <br>
+              <!-- You shouldn't need to change the submit button -->
+              <input type="submit" class="btn btn-primary btn-lg" value="Predict!">
+            </form>
+          </div>
+        </div>  
+      </div>
+      <!-- hr is "horizontal rule". it makes a nice classy line -->
+      <hr>
+      <!-- This section contains paragraphs of text at the bottom -->
+      <div class="container">
+        <!--
+          Replace with your content. The <p> tags are how you create new
+          paragraphs. If you just hit enter, the text will "float" up to the
+          previous line
+        -->
+        <p>
+          While this model was originally designed to disambiguate three star reviews it can be used on just about anything. 
+        </p>
+        <p>
+          This model is designed to classify a user review for a good or service as either positive or negative. It does this by taking in a written review, cleaning the data, then pulling out important words or features which are weighted more to one classification or the other.
+        </p>
+        <p>
+          Please type a review into the text box and hit the big blue Predict! button to get your prediction.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

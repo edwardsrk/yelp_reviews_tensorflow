@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the title that appears in the browser tab.
+      Replace it with the title of your app
+    -->
+    <title>User Review Classifier</title>
+    <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Results</h1>
+      </div>
+      <div class="container">
+        <!-- 
+          This table contains the result as a large number surrounded by smaller
+          text. It uses a table rather than bootstrap rows/cols in order to use
+          the align-middle CSS class
+        -->
+        <table style="width: 100%;">
+          <tbody>
+            <tr>
+              <td class="align-middle" style="width: 33%; text-align: right;">
+                The model's review prediction is
+              </td>
+              <td class="align-middle" style="width: 33%; text-align: center;">
+                {{ prediction }}
+              </td>
+              <!-- Customize this text to describe the result -->
+              <td class="align-middle" style="width: 33%">
+                sentiment
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <td class="align-middle" style="width: 33%; text-align: center;">
+        {{ key_feats | safe }}
+        </td>
+        <hr>
+        <div class="row">
+          <div class="col" style="text-align: center;">
+            <a href="/">Go back home</a>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </body>
+</html>
