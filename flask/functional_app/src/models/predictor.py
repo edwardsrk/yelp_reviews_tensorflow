@@ -1,10 +1,10 @@
 import pickle
 import pandas as pd
-
+import os
 
 def un_pickle_model():
     """ Load the model from the .pkl file """
-    with open ('C:/Users/edwardsrk/final_proj/yelp_reviews_tensorflow/data/pickles/final_sgd_model', "rb") as model_p: 
+    with open (os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))+"/final_sgd_model", "rb") as model_p: 
         loaded_model = pickle.load(model_p)
     return loaded_model
 
